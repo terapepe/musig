@@ -25,12 +25,11 @@ window.MUSIG_CONFIG = {
   },
 
   /**
-   *  "multi"  → always show all 4 networks: Solana, Robinhood, Base, BSC
+   *  "multi"
    *  "single" → show only `singleNetwork` (solana | robinhood | base | bsc);
-   *             colors + copy come from networks.<id>.theme / text.single (+ networks.<id>.text)
    */
-  mode: "multi",
-  singleNetwork: "solana",
+  mode: "single",
+  singleNetwork: "robinhood",
 
   /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
   token: {
