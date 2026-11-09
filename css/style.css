@@ -59,6 +59,8 @@ code, .mono { font-family: var(--mono); }
   backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
 }
 .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: 2px; }
+.brand .wordmark { height: 50px; width: auto; }
+.footer .brand .wordmark { height: 56px; }
 .nav { display: flex; gap: 2px; margin-left: auto; }
 .nav a { padding: 8px 12px; border-radius: 999px; font-size: 14px; color: var(--muted); transition: .2s; }
 .nav a:hover { color: var(--text); background: rgba(177, 75, 255, .14); }
@@ -333,7 +335,7 @@ body[data-mode="single"] .ca-net-icon img { width: 52px; height: 52px; }
 }
 @media (max-width: 620px) {
   .topbar .btn-primary { padding: 9px 12px; font-size: 13px; }
-  .brand span { display: none; }
+  .topbar .brand .wordmark { height: 40px; }
   .ca-main { flex-wrap: wrap; }
   .ca-body { flex-basis: calc(100% - 74px); }
   .btn-copy { width: 100%; }
