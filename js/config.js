@@ -16,6 +16,14 @@ window.MUSIG_CONFIG = {
     telegram: "", // "" = ẩn
   },
 
+  /** Nút "Go to App" ở góc trên. url "" = hiện thông báo comingSoon; có url = mở app */
+  app: {
+    label: "Go to App",
+    url: "",
+    comingSoonTitle: "App coming soon",
+    comingSoonText: "The Musig project is currently being deployed. The app will launch soon after the final tests are completed. Follow {x} for the official launch announcement.",
+  },
+
   /**
    *  "multi"  → luôn hiển thị đủ 4 mạng: Solana, Robinhood, Base, BSC
    *  "single" → chỉ hiển thị mạng `singleNetwork` (solana | robinhood | base | bsc);

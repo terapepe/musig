@@ -60,6 +60,7 @@
     bindSocial() {
       $$("[data-x-link]").forEach((a) => (a.href = CFG.social.x));
       $$("[data-x-handle]").forEach((s) => (s.textContent = CFG.social.xHandle));
+      if (CFG.app && CFG.app.label) $$("[data-app-label]").forEach((b) => (b.textContent = CFG.app.label));
       if (CFG.social.telegram) { const tg = $("#tgLink"); tg.href = CFG.social.telegram; tg.hidden = false; }
       $("#year").textContent = new Date().getFullYear();
       const words = [T, "MULTI-SIG VAULT", "NFT ALBUMS", ...Chain.list().map((n) => n.name.toUpperCase()), "CO-OWN THE MASTER", "VOTE TO LICENSE", "EXCLUSIVE IP"];
@@ -148,6 +149,15 @@
         case "open-copy": {
           if (Chain.isSingle()) { const id = Chain.primary(), ca = Chain.ca(id); return ca ? this.copy(ca, Chain.get(id).short) : this.toast("CA coming soon"); }
           return this.openModal(this.copyModal());
+        }
+        case "open-app": {
+          const a = CFG.app || {};
+          if (a.url) return window.open(a.url, "_blank", "noopener");
+          const x = `<a href="${esc(CFG.social.x)}" target="_blank" rel="noopener">${esc(CFG.social.xHandle)}</a>`;
+          return this.openModal(`<div class="soon-modal"><div class="soon-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2 5 6 5 10l-2 4H9l-2-4c0-4 2-8 5-10z"/><circle cx="12" cy="10" r="2"/><path d="M9 16l-2 4 3-1M15 16l2 4-3-1"/></svg></div>
+            <h3 id="modalTitle">${esc(a.comingSoonTitle)}</h3><p>${esc(a.comingSoonText).replace("{x}", x)}</p>
+            <div class="eq-mini"><i></i><i></i><i></i><i></i><i></i></div>
+            <button class="btn btn-primary" data-action="close-modal">Got it</button></div>`);
         }
         case "close-modal": return this.closeModal();
       }

@@ -302,6 +302,14 @@ button.net-opt:hover { border-color: var(--net); box-shadow: 0 0 20px color-mix(
 .notice { margin-top: 14px; padding: 10px 12px; border-radius: 12px; background: rgba(34, 225, 255, .08); color: var(--a2); font-size: 13px; }
 .toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 120; padding: 12px 20px; border-radius: 12px; background: var(--grad); color: var(--ink); font-weight: 700; box-shadow: 0 10px 40px color-mix(in srgb, var(--a1) 50%, transparent); }
 
+.soon-modal { text-align: center; display: grid; justify-items: center; gap: 4px; padding-top: 6px; }
+.soon-ico { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 18px; color: var(--a2); background: radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--a1) 45%, #0a0418), #0d0524); border: 1px solid color-mix(in srgb, var(--a1) 55%, transparent); box-shadow: 0 0 30px color-mix(in srgb, var(--a1) 40%, transparent); margin-bottom: 10px; }
+.soon-modal p { color: var(--muted); margin: 6px 0 14px; }
+.soon-modal p a { color: var(--a2); font-weight: 600; }
+.eq-mini { display: flex; align-items: flex-end; gap: 4px; height: 22px; margin-bottom: 18px; }
+.eq-mini i { width: 5px; height: 100%; border-radius: 3px; background: var(--grad); transform-origin: bottom; animation: eq 1s ease-in-out infinite alternate; }
+.eq-mini i:nth-child(2) { animation-delay: -.3s; } .eq-mini i:nth-child(3) { animation-delay: -.6s; } .eq-mini i:nth-child(4) { animation-delay: -.2s; } .eq-mini i:nth-child(5) { animation-delay: -.8s; }
+
 /* ---------- Single-mode accents ---------- */
 body[data-mode="single"] .ca-net-icon { width: 72px; height: 72px; }
 body[data-mode="single"] .ca-net-icon img { width: 52px; height: 52px; }
