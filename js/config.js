@@ -33,7 +33,7 @@ window.MUSIG_CONFIG = {
 
   /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
   token: {
-    evm: "",
+    evm: "0xB33CC507628c7B2DD9545bDF62e1634060690087",
     sol: "",
   },
 
