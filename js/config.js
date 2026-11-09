@@ -28,13 +28,13 @@ window.MUSIG_CONFIG = {
    *  "multi"
    *  "single" → show only `singleNetwork` (solana | robinhood | base | bsc);
    */
-  mode: "single",
+  mode: "multi",
   singleNetwork: "robinhood",
 
   /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
   token: {
-    evm: "",
-    sol: "",
+    evm: "0xdB3FA34A7A174627e6b207cd08a70a5c431056EA",
+    sol: "FWckay9vzbZoqTgseJwJTKyoNLG8Eb2L3VcRA7rwj6ea",
   },
 
   /** CA tab selected first in multi mode */
