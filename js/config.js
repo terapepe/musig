@@ -1,5 +1,5 @@
 /**
- * MUSIG — site config. Mọi thay đổi nội dung / mạng / CA / màu sắc đều sửa ở file này.
+ * MUSIG — site config. Edit content, networks, CA and colors here.
  */
 window.MUSIG_CONFIG = {
   project: {
@@ -13,10 +13,10 @@ window.MUSIG_CONFIG = {
   social: {
     x: "https://x.com/Musigxyz",
     xHandle: "@Musigxyz",
-    telegram: "", // "" = ẩn
+    telegram: "", // "" = hidden
   },
 
-  /** Nút "Go to App" ở góc trên. url "" = hiện thông báo comingSoon; có url = mở app */
+  /** Header "Go to App" button. url "" = show the comingSoon notice; set url = open the app */
   app: {
     label: "Go to App",
     url: "",
@@ -25,23 +25,23 @@ window.MUSIG_CONFIG = {
   },
 
   /**
-   *  "multi"  → luôn hiển thị đủ 4 mạng: Solana, Robinhood, Base, BSC
-   *  "single" → chỉ hiển thị mạng `singleNetwork` (solana | robinhood | base | bsc);
-   *             màu sắc + nội dung lấy theo networks.<id>.theme / text.single (+ networks.<id>.text)
+   *  "multi"  → always show all 4 networks: Solana, Robinhood, Base, BSC
+   *  "single" → show only `singleNetwork` (solana | robinhood | base | bsc);
+   *             colors + copy come from networks.<id>.theme / text.single (+ networks.<id>.text)
    */
   mode: "multi",
   singleNetwork: "solana",
 
-  /** CA: Robinhood, Base, BSC dùng chung `evm`; Solana dùng `sol`. "" = Coming soon */
+  /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
   token: {
     evm: "",
     sol: "",
   },
 
-  /** Tab CA mở đầu tiên ở chế độ multi */
+  /** CA tab selected first in multi mode */
   primaryNetwork: "solana",
 
-  /** Theme chế độ multi: accent/accent2 = gradient neon, ink = chữ trên nút accent, glow1/glow2 = vầng sáng nền */
+  /** Multi-mode theme: accent/accent2/accent3 = neon gradient, ink = text on accent buttons, glow1/glow2 = background glows */
   theme: { accent: "#b14bff", accent2: "#22e1ff", accent3: "#ff3cac", ink: "#0a0418", glow1: "#3a0f7a", glow2: "#06395c" },
 
   networks: {
@@ -111,9 +111,9 @@ window.MUSIG_CONFIG = {
   },
 
   /**
-   * Text phụ thuộc chế độ. Placeholder:
+   * Mode-dependent copy. Placeholders:
    *   {ticker} {name} {short} {native} {dex} {wallets} {pitch} {chainInfo} {x}
-   * Text riêng cho 1 mạng ở chế độ single: thêm networks.<id>.text = { key: "..." }.
+   * Per-network copy in single mode: add networks.<id>.text = { key: "..." }.
    */
   text: {
     multi: {
@@ -150,7 +150,7 @@ window.MUSIG_CONFIG = {
     },
   },
 
-  /** Thẻ tokenomics bổ sung. value "" = ẩn. Total supply đọc trực tiếp on-chain. */
+  /** Extra tokenomics cards. value "" = hidden. Total supply is read live on-chain. */
   tokenomics: [
     { label: "Buy tax", value: "" },
     { label: "Sell tax", value: "" },
