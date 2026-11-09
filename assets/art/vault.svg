@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Multi-sig vault holding a master record">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22e1ff"/><stop offset=".55" stop-color="#b14bff"/><stop offset="1" stop-color="#ff3cac"/></linearGradient>
+    <radialGradient id="v" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#1a0838"/><stop offset="1" stop-color="#06021a"/></radialGradient>
+    <radialGradient id="rec" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2a1550"/><stop offset=".3" stop-color="#0b0420"/><stop offset="1" stop-color="#140630"/></radialGradient>
+  </defs>
+  <rect x="50" y="50" width="300" height="300" rx="46" fill="url(#v)" stroke="url(#g)" stroke-width="5"/>
+  <rect x="72" y="72" width="256" height="256" rx="34" fill="none" stroke="#b14bff" stroke-opacity=".35" stroke-dasharray="6 10"/>
+  <circle cx="200" cy="200" r="104" fill="url(#rec)" stroke="url(#g)" stroke-width="3"/>
+  <g fill="none" stroke="#b14bff" stroke-opacity=".28"><circle cx="200" cy="200" r="90"/><circle cx="200" cy="200" r="78"/><circle cx="200" cy="200" r="66"/><circle cx="200" cy="200" r="54"/></g>
+  <circle cx="200" cy="200" r="34" fill="url(#g)"/>
+  <circle cx="200" cy="200" r="7" fill="#06021a"/>
+  <g fill="url(#g)"><rect x="34" y="120" width="22" height="40" rx="6"/><rect x="34" y="240" width="22" height="40" rx="6"/></g>
+  <g stroke="url(#g)" stroke-width="5" stroke-linecap="round"><path d="M200 50v-22M200 372v-22M50 200H28M372 200h-22"/></g>
+</svg>

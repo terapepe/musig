@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MUSIG ($MUSIG) — Multi-Sig NFT Album Vault &amp; Exclusive IP Ownership</title>
+  <meta name="description" content="MUSIG locks master recordings and original NFT albums in Multi-Sig Vaults so Web3 collectors can co-bid, co-own and vote on commercial licensing for film and advertising.">
+  <meta property="og:title" content="MUSIG ($MUSIG) — Multi-Sig NFT Album Vault">
+  <meta property="og:description" content="Co-own the music that matters. Masters locked in Multi-Sig Vaults, licensing approved by keyholders.">
+  <meta property="og:image" content="assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07021a">
+  <link rel="icon" href="assets/art/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top"><img src="assets/art/logo.svg" alt="" width="38" height="38"><span>MUSIG</span></a>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#vault">Vault</a>
+      <a href="#usecases">Use cases</a>
+      <a href="#chains" data-t="navChains">Networks</a>
+      <a href="#token">Token</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="top-actions">
+      <a class="icon-btn" data-x-link target="_blank" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8.1-9.3L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20z"/></svg>
+      </a>
+      <button class="btn btn-primary" data-action="open-copy">Copy CA</button>
+      <button class="icon-btn burger" data-action="toggle-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero-text">
+        <span class="pill" id="netKicker"></span>
+        <h1 class="hero-title"><span class="grad">MUSIG</span></h1>
+        <p class="hero-sub">Multi-Sig NFT Album Vault<br>&amp; Exclusive IP Ownership</p>
+        <p class="lead">Own a piece of the music that matters. Master recordings and original NFT albums are locked inside <b>Multi-Sig Vaults</b> — collectors co-bid, co-own, and vote together on every commercial license.</p>
+
+        <!-- CA BOX -->
+        <div class="ca-box" id="caBox">
+          <div class="ca-tabs" id="caTabs" role="tablist"></div>
+          <div class="ca-main">
+            <div class="ca-net-icon"><img id="caIcon" src="" alt=""></div>
+            <div class="ca-body">
+              <div class="ca-label"><span>Contract Address</span><b id="caNet"></b><span class="ca-note" id="caNote"></span></div>
+              <code class="ca-value" id="caValue">—</code>
+            </div>
+            <button class="btn btn-primary btn-copy" id="caCopy" data-action="copy-ca">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              <span>Copy CA</span>
+            </button>
+          </div>
+          <div class="ca-links" id="caLinks"></div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-ghost btn-lg" href="#vault">How the vault works</a>
+          <a class="btn btn-ghost btn-lg" data-x-link target="_blank" rel="noopener">Follow <span data-x-handle></span></a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="orbit-nets" id="orbitNets"></div>
+        <div class="vinyl">
+          <div class="vinyl-label"><img src="assets/art/logo.svg" alt=""></div>
+        </div>
+        <div class="lock-badge"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Vault locked</span></div>
+        <div class="sig-badge"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span>M-of-N signatures</span></div>
+        <div class="eq" id="eq"></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- ABOUT -->
+    <section class="wrap section about reveal" id="about">
+      <div class="about-art"><img src="assets/art/vault.svg" alt="A master record sealed inside a multi-sig vault" loading="lazy"></div>
+      <div>
+        <span class="kicker">What is Musig</span>
+        <h2 class="section-title">Music IP, <span class="grad">co-owned</span> on-chain.</h2>
+        <p>The most valuable songs in the world are owned by a handful of labels and funds. <b>Musig</b> opens that door: rare master recordings and original NFT albums become <b>commercial-grade NFTs</b> held in a shared Multi-Sig Vault, so a community of collectors can own them together.</p>
+        <p data-t-html="aboutHtml"></p>
+        <ul class="ticks">
+          <li>Exclusive IP assets secured by multi-signature custody</li>
+          <li>Collective bidding — pool with other collectors for premium tracks</li>
+          <li>Licensing for film, ads & games decided by keyholder vote</li>
+          <li data-t="tick"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="wrap section reveal" id="vault">
+      <div class="section-head">
+        <span class="kicker">The mechanism</span>
+        <h2 class="section-title">How the Multi-Sig Vault works</h2>
+        <p class="muted">No single wallet can move the master. Every important decision needs several keyholders to agree.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step"><span class="n">01</span><div class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3a9 9 0 0 1 9 9"/></svg></div><h4>Mint the master</h4><p>An artist or rights holder tokenizes a master recording or original album as a rare commercial NFT, with the rights it carries clearly described.</p></div>
+        <div class="flow-step"><span class="n">02</span><div class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5"/></svg></div><h4>Lock in the vault</h4><p>The NFT is deposited into a Multi-Sig Vault — a smart wallet that only moves assets when the required number of keyholders sign.</p></div>
+        <div class="flow-step"><span class="n">03</span><div class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h4>Co-bid at auction</h4><p>Web3 investors and music collectors pool funds to bid together for tracks no one would buy alone.</p></div>
+        <div class="flow-step"><span class="n">04</span><div class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><path d="m11.5 11.5 9 9M17 17l2-2M15 15l2-2"/></svg></div><h4>Hold the keys</h4><p>Winning co-owners become keyholders of the vault. Their share is recorded on-chain and visible to everyone.</p></div>
+        <div class="flow-step"><span class="n">05</span><div class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="m3 8 3-5 4 2-1 3M10 5l4 3M15 5l4 3"/></svg></div><h4>Vote on licensing</h4><p>A studio wants the song for a film or campaign? A proposal is opened and keyholders approve or reject it with their signatures.</p></div>
+      </div>
+
+      <div class="msig reveal">
+        <div class="msig-art"><img src="assets/art/keys.svg" alt="Five keys, three highlighted — an M-of-N approval" loading="lazy"></div>
+        <div class="msig-text">
+          <span class="kicker">M-of-N, explained simply</span>
+          <h3>Like a bank vault that needs several keys turned at once.</h3>
+          <p>A vault is set up with <b>N</b> keyholders and an approval threshold <b>M</b>. For example, in a <b>3-of-5</b> vault, any three of the five keyholders must sign before a license is granted or an asset is moved.</p>
+          <ul class="ticks">
+            <li>No single point of failure — one lost or compromised key can't drain the vault</li>
+            <li>No rug — the master can't be sold off by one member</li>
+            <li>Every proposal, signature and decision is verifiable on-chain</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="wrap section reveal" id="usecases">
+      <div class="section-head">
+        <span class="kicker">Where vaulted music goes</span>
+        <h2 class="section-title">Licensing, decided together</h2>
+        <p class="muted">Sync licensing is how great songs reach new audiences. Musig lets the community that owns a track decide where it's heard.</p>
+      </div>
+      <div class="cards cards-3">
+        <div class="card glow"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="m3 8 3-5 4 2-1 3M10 5l4 3M15 5l4 3"/></svg></div><h4>Film &amp; TV sync</h4><p>Studios request a track for a scene, trailer or series. Keyholders review the terms and sign off on-chain.</p></div>
+        <div class="card glow"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h4l7 5V5L7 10z"/><path d="M18 9a4 4 0 0 1 0 6"/></svg></div><h4>Advertising campaigns</h4><p>Brands license iconic sounds for commercials and social campaigns — approved only when the vault agrees.</p></div>
+        <div class="card glow"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".6"/><circle cx="18" cy="13.5" r=".6"/></svg></div><h4>Games &amp; metaverse</h4><p>Soundtracks for games, virtual concerts and immersive worlds, licensed transparently from the vault.</p></div>
+        <div class="card glow"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M12 3v18M18 3v18"/><rect x="4" y="6" width="4" height="3" rx="1"/><rect x="10" y="13" width="4" height="3" rx="1"/><rect x="16" y="8" width="4" height="3" rx="1"/></svg></div><h4>Remix &amp; sampling</h4><p>Producers can propose official remixes or samples, with permissions granted by the co-owners.</p></div>
+        <div class="card glow"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 0 1 14 0M8 12a4 4 0 0 1 8 0"/><circle cx="12" cy="12" r="1.5"/><path d="M12 14v7M8 21h8"/></svg></div><h4>Live &amp; broadcast</h4><p>Events, radio and streaming placements handled as on-chain proposals with clear, public decisions.</p></div>
+        <div class="card glow"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 12 3l9 6M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18"/></svg></div><h4>Archive &amp; legacy</h4><p>Rare recordings preserved for the long run by a community that cares about them — not hidden in a catalog.</p></div>
+      </div>
+    </section>
+
+    <!-- AUDIENCES -->
+    <section class="wrap section reveal" id="who">
+      <div class="section-head">
+        <span class="kicker">Built for everyone in music</span>
+        <h2 class="section-title">Artists. Collectors. Studios.</h2>
+      </div>
+      <div class="cards cards-3 audience">
+        <div class="card"><span class="tag">For artists</span><h4>Keep your legacy close to fans</h4><ul class="ticks"><li>Raise value from a master without handing it to one buyer</li><li>Turn superfans into co-owners and advocates</li><li>Transparent on-chain record of who holds what</li></ul></div>
+        <div class="card"><span class="tag">For collectors</span><h4>Own culture, not just a JPEG</h4><ul class="ticks"><li>Co-bid on rare tracks with other collectors</li><li>Hold a real key and a real vote</li><li>Shape where the music appears next</li></ul></div>
+        <div class="card"><span class="tag">For studios &amp; brands</span><h4>One clear place to license</h4><ul class="ticks"><li>Submit a licensing proposal directly to the vault</li><li>Decisions are signed and verifiable</li><li>An engaged community behind every sound</li></ul></div>
+      </div>
+    </section>
+
+    <!-- CHAINS -->
+    <section class="wrap section reveal" id="chains">
+      <div class="section-head">
+        <span class="kicker" data-t="chainsKicker"></span>
+        <h2 class="section-title" data-t="chainsTitle"></h2>
+        <p class="muted" data-t-html="chainsNoteHtml"></p>
+      </div>
+      <div class="chain-grid" id="chainGrid"></div>
+    </section>
+
+    <!-- TOKEN -->
+    <section class="wrap section reveal" id="token">
+      <div class="section-head">
+        <span class="kicker">The $MUSIG token</span>
+        <h2 class="section-title">Tokenomics</h2>
+        <p class="muted">$MUSIG is the community token of the Musig movement — the badge of everyone who believes music IP should be shared, transparent and on-chain.</p>
+      </div>
+      <div class="toko-cards" id="tokoCards"></div>
+      <div class="cards cards-3 utility">
+        <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v4a2 2 0 0 0 0 4v4H3v-4a2 2 0 0 0 0-4z"/><path d="M14 7v12" stroke-dasharray="2 2"/></svg></div><h4>Community access</h4><p>Join the circle following vault launches, auctions and licensing proposals.</p></div>
+        <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="m8 9 3 3 6-8"/></svg></div><h4>Community voice</h4><p>Help signal which artists, albums and masters the community wants to vault next.</p></div>
+        <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h4>Multichain culture</h4><p>One identity across ecosystems, so music lovers can join from the chain they already use.</p></div>
+      </div>
+    </section>
+
+    <!-- HOW TO GET -->
+    <section class="wrap section reveal" id="buy">
+      <div class="section-head">
+        <span class="kicker">Get started</span>
+        <h2 class="section-title">How to get $MUSIG</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="n">1</span><h4>Get a wallet</h4><p data-t="step1"></p></div>
+        <div class="step"><span class="n">2</span><h4>Fund it</h4><p data-t="step2"></p></div>
+        <div class="step"><span class="n">3</span><h4>Copy the CA</h4><p data-t="step3"></p></div>
+        <div class="step"><span class="n">4</span><h4>Swap &amp; join</h4><p data-t="step4"></p></div>
+      </div>
+      <div class="center"><button class="btn btn-primary btn-lg" data-action="open-copy">Copy $MUSIG CA</button></div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="wrap section reveal" id="roadmap">
+      <div class="section-head">
+        <span class="kicker">The setlist</span>
+        <h2 class="section-title">Roadmap</h2>
+      </div>
+      <div class="roadmap">
+        <div class="phase"><span class="tag">Track 01</span><h4>Intro</h4><ul><li>Launch $MUSIG</li><li data-t="roadmap"></li><li>Website, X &amp; community</li></ul></div>
+        <div class="phase"><span class="tag">Track 02</span><h4>Verse</h4><ul><li>Vault framework &amp; docs</li><li>Artist &amp; collector onboarding</li><li>First curated master collection</li></ul></div>
+        <div class="phase"><span class="tag">Track 03</span><h4>Chorus</h4><ul><li>Collective auctions for vaulted NFTs</li><li>Keyholder voting dashboard</li><li>Licensing proposal portal</li></ul></div>
+        <div class="phase"><span class="tag">Track 04</span><h4>Encore</h4><ul><li>Studio, agency &amp; brand partnerships</li><li>Cross-chain vaults</li><li>Global music IP community</li></ul></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="wrap section reveal" id="faq">
+      <div class="section-head">
+        <span class="kicker">Questions</span>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="faq">
+        <details><summary>What is Musig?</summary><p>Musig is a Web3 music concept where master recordings and original NFT albums are held in Multi-Sig Vaults, letting groups of collectors co-own exclusive music IP and vote together on commercial licensing.</p></details>
+        <details><summary>What is a Multi-Sig Vault?</summary><p>A multi-signature (multi-sig) vault is a smart wallet controlled by several keys. Actions — like granting a license or moving an asset — only happen when a set number of keyholders (M of N) sign.</p></details>
+        <details><summary>How does co-ownership work?</summary><p>Collectors pool together to bid on a vaulted NFT. Winners become keyholders, and their role is recorded on-chain so anyone can verify who holds the keys.</p></details>
+        <details><summary>Who approves a film or ad license?</summary><p>The vault's keyholders. A licensing request is opened as a proposal, and it is approved only if the required number of keyholders sign.</p></details>
+        <details><summary data-t="faqQ"></summary><p data-t="faqA"></p></details>
+        <details><summary>How do I avoid fake tokens?</summary><p>Only use the contract addresses shown on this site and on our official X account <span data-x-handle></span>. Never share your seed phrase — the team will never DM you first.</p></details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wrap section reveal">
+      <div class="cta-band">
+        <div>
+          <h2>Turn up the vault.</h2>
+          <p>Follow <span data-x-handle></span> for vault launches, auctions and the official CA.</p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn btn-primary btn-lg" data-action="open-copy">Copy CA</button>
+          <a class="btn btn-ghost btn-lg" data-x-link target="_blank" rel="noopener">Follow on X</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="brand"><img src="assets/art/logo.svg" alt="" width="34" height="34"><span>MUSIG</span></div>
+      <div class="footer-links"><a data-x-link target="_blank" rel="noopener"><span data-x-handle></span></a><a id="tgLink" target="_blank" rel="noopener" hidden>Telegram</a></div>
+      <p class="disclaimer">$MUSIG is a community token. Nothing on this site is financial, legal or investment advice, and holding $MUSIG does not by itself grant ownership of, or rights to revenue from, any music IP. Vault features described here are a product vision and may change. Crypto is volatile — only use what you can afford to lose.</p>
+      <p class="muted small">© <span id="year"></span> MUSIG community</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-action="close-modal"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-action="close-modal" aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/chain.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
