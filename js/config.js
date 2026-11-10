@@ -28,7 +28,7 @@ window.MUSIG_CONFIG = {
    *  "multi"
    *  "single" → show only `singleNetwork` (solana | robinhood | base | bsc);
    */
-  mode: "multi",
+  mode: "single",
   singleNetwork: "robinhood",
 
   /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
