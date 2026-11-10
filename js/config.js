@@ -3,9 +3,9 @@
  */
 window.MUSIG_CONFIG = {
   project: {
-    name: "MUSIG",
-    ticker: "$MUSIG",
-    symbol: "MUSIG",
+    name: "MUSIG.XYZ",
+    ticker: "$MSG",
+    symbol: "MSG",
     tagline: "Multi-Sig NFT Album Vault & Exclusive IP Ownership",
     decimalsFallback: 18,
   },
@@ -33,7 +33,7 @@ window.MUSIG_CONFIG = {
 
   /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
   token: {
-    evm: "0x5ccd2db99f4b2c199ea08da0debc67a737c3655e",
+    evm: "0x0f4f85c5c9b21b28426c0875a69b0a020888f882",
     sol: "",
   },
 
