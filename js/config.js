@@ -3,9 +3,9 @@
  */
 window.MUSIG_CONFIG = {
   project: {
-    name: "MUSIG.XYZ",
-    ticker: "$MSG",
-    symbol: "MSG",
+    name: "MUSIG",
+    ticker: "$MUSIG",
+    symbol: "MUSIG",
     tagline: "Multi-Sig NFT Album Vault & Exclusive IP Ownership",
     decimalsFallback: 18,
   },
