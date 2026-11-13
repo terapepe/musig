@@ -1,8 +1,8 @@
 window.MUSIG_CONFIG = {
   project: {
-    name: "MUSIG",
-    ticker: "$MUSIG",
-    symbol: "MUSIG",
+    name: "MSIG",
+    ticker: "$MSIG",
+    symbol: "MSIG",
     tagline: "Multi-Sig NFT Album Vault & Exclusive IP Ownership",
     decimalsFallback: 18,
   },
@@ -23,7 +23,7 @@ window.MUSIG_CONFIG = {
   singleNetwork: "robinhood",
 
   token: {
-    evm: "0xfa25e7ca3a541bef72b1269f272897c774f793a7",
+    evm: "0x9819cc8314ee3de859441ce6e20520f7c89fc229",
     sol: "",
   },
 
