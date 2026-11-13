@@ -1,16 +1,16 @@
 window.MUSIG_CONFIG = {
   project: {
-    name: "MSIG",
-    ticker: "$MSIG",
-    symbol: "MSIG",
+    name: "Musig Ai",
+    ticker: "$MUS",
+    symbol: "MUS",
     tagline: "Multi-Sig NFT Album Vault & Exclusive IP Ownership",
     decimalsFallback: 18,
   },
 
   social: {
-    x: "https://x.com/Musigxyz",
-    xHandle: "@Musigxyz",
-    telegram: "", // "" = hidden
+    x: "https://x.com/multisighuman",
+    xHandle: "@multisighuman",
+    telegram: "", // "" = hidden Musigxyz
   },
   app: {
     label: "Go to App",
@@ -23,7 +23,7 @@ window.MUSIG_CONFIG = {
   singleNetwork: "robinhood",
 
   token: {
-    evm: "",
+    evm: "0x6a0c60489c93b9e9dbf38b838a0a5344d2b8cdf7",
     sol: "",
   },
 
