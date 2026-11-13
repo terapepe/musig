@@ -23,7 +23,7 @@ window.MUSIG_CONFIG = {
   singleNetwork: "robinhood",
 
   token: {
-    evm: "0x9819cc8314ee3de859441ce6e20520f7c89fc229",
+    evm: "",
     sol: "",
   },
 
