@@ -1,6 +1,3 @@
-/**
- * MUSIG — site config. Edit content, networks, CA and colors here.
- */
 window.MUSIG_CONFIG = {
   project: {
     name: "MUSIG",
@@ -15,8 +12,6 @@ window.MUSIG_CONFIG = {
     xHandle: "@Musigxyz",
     telegram: "", // "" = hidden
   },
-
-  /** Header "Go to App" button. url "" = show the comingSoon notice; set url = open the app */
   app: {
     label: "Go to App",
     url: "",
@@ -24,16 +19,11 @@ window.MUSIG_CONFIG = {
     comingSoonText: "The Musig project is currently being deployed. The app will launch soon after the final tests are completed. Follow {x} for the official launch announcement.",
   },
 
-  /**
-   *  "multi"
-   *  "single" → show only `singleNetwork` (solana | robinhood | base | bsc);
-   */
   mode: "single",
   singleNetwork: "robinhood",
 
-  /** CA: Robinhood, Base and BSC share `evm`; Solana uses `sol`. "" = Coming soon */
   token: {
-    evm: "",
+    evm: "0xfa25e7ca3a541bef72b1269f272897c774f793a7",
     sol: "",
   },
 
